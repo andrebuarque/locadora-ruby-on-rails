@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @rent.price %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @rent.date.strftime('%d/%m/%Y') %>
+</p>
+
+<p>
+  <strong>Preview date:</strong>
+  <%= @rent.preview_date.strftime('%d/%m/%Y') %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @rent.end_date.strftime('%d/%m/%Y') %>
+</p>
+
+<p>
+  <strong>Tenant:</strong>
+  <%= @rent.tenant.name if not @rent.tenant.nil? %>
+</p>
+
+<%= link_to 'Edit', edit_rent_path(@rent) %> |
+<%= link_to 'Back', rents_path %>

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :tenants
+
+  resources :rents
+
+  resources :genders
+
+  resources :shelves
+
+  resources :users
+
   resources :movies
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all
+    @movies = Movie.includes(:gender, :shelf)
   end
 
   # GET /movies/1
@@ -69,6 +69,6 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:title, :review)
+      params.require(:movie).permit(:title, :review, :gender_id, :shelf_id)
     end
 end

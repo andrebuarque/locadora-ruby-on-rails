@@ -10,5 +10,15 @@
   <%= @movie.review %>
 </p>
 
+<p>
+  <strong>Gender:</strong>
+  <%= @movie.gender.name unless @movie.gender.nil? %>
+</p>
+
+<p>
+  <strong>Shelf:</strong>
+  <%= @movie.shelf.name unless @movie.shelf.nil? %>
+</p>
+
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
