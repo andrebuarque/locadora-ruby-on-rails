@@ -1,0 +1,151 @@
+  [1m[36m (4.8ms)[0m  [1mCREATE DATABASE `locadora-ruby-on-rails_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[36m (88.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (104.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateMovies (20141028004404)
+  [1m[35m (33.6ms)[0m  CREATE TABLE `movies` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `review` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141028004404')
+  [1m[36m (24.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/movies" for 10.0.2.2 at 2014-10-27 22:45:03 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered movies/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 1412ms (Views: 1381.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-27 22:45:05 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-27 22:45:05 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-27 22:45:05 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-27 22:45:05 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-27 22:45:05 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-27 22:45:05 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-27 22:45:05 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-27 22:45:05 -0200
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2014-10-27 22:45:07 -0200
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (46.6ms)
+  Rendered movies/new.html.erb within layouts/application (91.7ms)
+Completed 200 OK in 304ms (Views: 301.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/movies" for 10.0.2.2 at 2014-10-27 22:45:12 -0200
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8Rmr3Hq//cNtzjUtvceH0ThWh+on2aV0Azl5aCAoH5w=", "movie"=>{"title"=>"ad", "review"=>"asasd"}, "commit"=>"Create Movie"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `movies` (`created_at`, `review`, `title`, `updated_at`) VALUES ('2014-10-28 00:45:12', 'asasd', 'ad', '2014-10-28 00:45:12')
+  [1m[36m (28.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/movies/1
+Completed 302 Found in 39ms (ActiveRecord: 29.2ms)
+
+
+Started GET "/movies/1" for 10.0.2.2 at 2014-10-27 22:45:12 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  `movies`.* FROM `movies`  WHERE `movies`.`id` = 1 LIMIT 1
+  Rendered movies/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 244ms (Views: 240.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-27 22:45:12 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-27 22:45:12 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-27 22:45:13 -0200
+
+
+Started GET "/movies" for 10.0.2.2 at 2014-10-27 22:45:15 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT `movies`.* FROM `movies`[0m
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 208ms (Views: 206.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1/edit" for 10.0.2.2 at 2014-10-27 22:45:17 -0200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  `movies`.* FROM `movies`  WHERE `movies`.`id` = 1 LIMIT 1
+  Rendered movies/_form.html.erb (1.9ms)
+  Rendered movies/edit.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 296ms (Views: 293.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/1" for 10.0.2.2 at 2014-10-27 22:45:26 -0200
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8Rmr3Hq//cNtzjUtvceH0ThWh+on2aV0Azl5aCAoH5w=", "movie"=>{"title"=>"Movie 1", "review"=>"review..."}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  `movies`.* FROM `movies`  WHERE `movies`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (51.3ms)[0m  [1mUPDATE `movies` SET `review` = 'review...', `title` = 'Movie 1', `updated_at` = '2014-10-28 00:45:26' WHERE `movies`.`id` = 1[0m
+  [1m[35m (14.4ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/movies/1
+Completed 302 Found in 76ms (ActiveRecord: 66.1ms)
+
+
+Started GET "/movies/1" for 10.0.2.2 at 2014-10-27 22:45:26 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT  `movies`.* FROM `movies`  WHERE `movies`.`id` = 1 LIMIT 1[0m
+  Rendered movies/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 217ms (Views: 214.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-27 22:45:26 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-27 22:45:27 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-27 22:45:27 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-27 22:45:27 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-27 22:45:27 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-27 22:45:27 -0200
+
+
+Started GET "/movies" for 10.0.2.2 at 2014-10-27 22:45:33 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 206ms (Views: 205.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 10.0.2.2 at 2014-10-27 22:45:36 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  `movies`.* FROM `movies`  WHERE `movies`.`id` = 1 LIMIT 1[0m
+  Rendered movies/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 217ms (Views: 213.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 10.0.2.2 at 2014-10-27 22:45:38 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 209ms (Views: 208.1ms | ActiveRecord: 0.3ms)
