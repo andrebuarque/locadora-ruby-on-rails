@@ -4,7 +4,7 @@ class RentsController < ApplicationController
   # GET /rents
   # GET /rents.json
   def index
-    @rents = Rent.all
+    @rents = Rent.includes(:tenant, :movies)
   end
 
   # GET /rents/1
@@ -69,6 +69,6 @@ class RentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rent_params
-      params.require(:rent).permit(:price, :date, :preview_date, :end_date, :tenant_id)
+      params.require(:rent).permit(:price, :date, :preview_date, :end_date, :tenant_id, :movies)
     end
 end

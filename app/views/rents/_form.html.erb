@@ -31,6 +31,10 @@
     <%= f.label :tenant %><br>
     <%= f.select :tenant_id, Tenant.all.collect { |t| [t.name, t.id] }, include_blank: true %>
   </div>
+  <div class="field">
+    <%= f.label :movies %><br>
+    <%= f.select :movies, Movie.all.collect { |m| [m.title, m.id] }, {}, :multiple => true, :size => 5 %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

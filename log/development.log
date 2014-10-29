@@ -7187,3 +7187,1892 @@ Processing by RentsController#index as HTML
   [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 3 LIMIT 1[0m
   Rendered rents/index.html.erb within layouts/application (7.5ms)
 Completed 200 OK in 397ms (Views: 395.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rents" for 10.0.2.2 at 2014-10-29 00:32:47 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by RentsController#index as HTML
+  [1m[35mRent Load (0.3ms)[0m  SELECT `rents`.* FROM `rents`
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 1 LIMIT 1[0m
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 3 LIMIT 1
+  Rendered rents/index.html.erb within layouts/application (117.8ms)
+Completed 200 OK in 1413ms (Views: 1289.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:32:50 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:32:50 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:32:50 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:32:50 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:32:50 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:32:51 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:32:52 -0200
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:32:54 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (203.9ms)
+  Rendered rents/new.html.erb within layouts/application (265.7ms)
+Completed 500 Internal Server Error in 332ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..2)):
+    33:   </div>
+    34:   <div class="field">
+    35:     <%= f.label :movies %><br>
+    36:     <%= f.select :movie_id, Movie.all.collect { |m| [t.m, t.title] }, {multiple: true, size: 5} %>
+    37:   </div>
+    38:   <div class="actions">
+    39:     <%= f.submit %>
+  app/views/rents/_form.html.erb:36:in `block (2 levels) in _app_views_rents__form_html_erb__1067874676536990990_70285994199360'
+  app/views/rents/_form.html.erb:36:in `block in _app_views_rents__form_html_erb__1067874676536990990_70285994199360'
+  app/views/rents/_form.html.erb:1:in `_app_views_rents__form_html_erb__1067874676536990990_70285994199360'
+  app/views/rents/new.html.erb:3:in `_app_views_rents_new_html_erb__3445079634669418609_70285993701760'
+
+
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.4ms)
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:32:54 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (31.3ms)
+  Rendered rents/new.html.erb within layouts/application (49.4ms)
+Completed 500 Internal Server Error in 103ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..2)):
+    33:   </div>
+    34:   <div class="field">
+    35:     <%= f.label :movies %><br>
+    36:     <%= f.select :movie_id, Movie.all.collect { |m| [t.m, t.title] }, {multiple: true, size: 5} %>
+    37:   </div>
+    38:   <div class="actions">
+    39:     <%= f.submit %>
+  app/views/rents/_form.html.erb:36:in `block (2 levels) in _app_views_rents__form_html_erb__1067874676536990990_70286001385380'
+  app/views/rents/_form.html.erb:36:in `block in _app_views_rents__form_html_erb__1067874676536990990_70286001385380'
+  app/views/rents/_form.html.erb:1:in `_app_views_rents__form_html_erb__1067874676536990990_70286001385380'
+  app/views/rents/new.html.erb:3:in `_app_views_rents_new_html_erb__3445079634669418609_70286001364260'
+
+
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.7ms)
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:33:18 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (30.4ms)
+  Rendered rents/new.html.erb within layouts/application (48.2ms)
+Completed 500 Internal Server Error in 102ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..2)):
+    33:   </div>
+    34:   <div class="field">
+    35:     <%= f.label :movies %><br>
+    36:     <%= f.select :movie_id, Movie.all.collect { |m| [t.m, t.title] }, multiple: true, size: 5 %>
+    37:   </div>
+    38:   <div class="actions">
+    39:     <%= f.submit %>
+  app/views/rents/_form.html.erb:36:in `block (2 levels) in _app_views_rents__form_html_erb__1067874676536990990_70286004060600'
+  app/views/rents/_form.html.erb:36:in `block in _app_views_rents__form_html_erb__1067874676536990990_70286004060600'
+  app/views/rents/_form.html.erb:1:in `_app_views_rents__form_html_erb__1067874676536990990_70286004060600'
+  app/views/rents/new.html.erb:3:in `_app_views_rents_new_html_erb__3445079634669418609_70286001364260'
+
+
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.9ms)
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:35:12 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (29.8ms)
+  Rendered rents/new.html.erb within layouts/application (47.6ms)
+Completed 500 Internal Server Error in 131ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..2)):
+    33:   </div>
+    34:   <div class="field">
+    35:     <%= f.label :movies %><br>
+    36:     <%= f.select :movie_id, Movie.all.collect { |m| [t.m, t.title] }, {}, multiple: true, size: 5 %>
+    37:   </div>
+    38:   <div class="actions">
+    39:     <%= f.submit %>
+  app/views/rents/_form.html.erb:36:in `block (2 levels) in _app_views_rents__form_html_erb__1067874676536990990_70286011124240'
+  app/views/rents/_form.html.erb:36:in `block in _app_views_rents__form_html_erb__1067874676536990990_70286011124240'
+  app/views/rents/_form.html.erb:1:in `_app_views_rents__form_html_erb__1067874676536990990_70286011124240'
+  app/views/rents/new.html.erb:3:in `_app_views_rents_new_html_erb__3445079634669418609_70286001364260'
+
+
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.1ms)
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:36:45 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.5ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (31.8ms)
+  Rendered rents/new.html.erb within layouts/application (50.4ms)
+Completed 500 Internal Server Error in 124ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..2)):
+    33:   </div>
+    34:   <div class="field">
+    35:     <%= f.label :movies %><br>
+    36:     <%= f.select :movie_id, Movie.all.collect { |m| [t.m, t.title] }, {}, :multiple => true, :size => 5 %>
+    37:   </div>
+    38:   <div class="actions">
+    39:     <%= f.submit %>
+  app/views/rents/_form.html.erb:36:in `block (2 levels) in _app_views_rents__form_html_erb__1067874676536990990_70286012049140'
+  app/views/rents/_form.html.erb:36:in `block in _app_views_rents__form_html_erb__1067874676536990990_70286012049140'
+  app/views/rents/_form.html.erb:1:in `_app_views_rents__form_html_erb__1067874676536990990_70286012049140'
+  app/views/rents/new.html.erb:3:in `_app_views_rents_new_html_erb__3445079634669418609_70286001364260'
+
+
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.2ms)
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:36:51 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (26.9ms)
+  Rendered rents/new.html.erb within layouts/application (43.2ms)
+Completed 500 Internal Server Error in 92ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..2)):
+    33:   </div>
+    34:   <div class="field">
+    35:     <%= f.label :movies %><br>
+    36:     <%= f.select :movie_id, Movie.all.collect { |m| [t.m, t.title] }, :multiple => true, :size => 5 %>
+    37:   </div>
+    38:   <div class="actions">
+    39:     <%= f.submit %>
+  app/views/rents/_form.html.erb:36:in `block (2 levels) in _app_views_rents__form_html_erb__1067874676536990990_70286004764620'
+  app/views/rents/_form.html.erb:36:in `block in _app_views_rents__form_html_erb__1067874676536990990_70286004764620'
+  app/views/rents/_form.html.erb:1:in `_app_views_rents__form_html_erb__1067874676536990990_70286004764620'
+  app/views/rents/new.html.erb:3:in `_app_views_rents_new_html_erb__3445079634669418609_70286001364260'
+
+
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.8ms)
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:36:58 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (29.8ms)
+  Rendered rents/new.html.erb within layouts/application (48.3ms)
+Completed 500 Internal Server Error in 102ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..2)):
+    33:   </div>
+    34:   <div class="field">
+    35:     <%= f.label :movies %><br>
+    36:     <%= f.select :movie_id, Movie.all.collect { |m| [t.m, t.title] }, {:multiple => true, :size => 5} %>
+    37:   </div>
+    38:   <div class="actions">
+    39:     <%= f.submit %>
+  app/views/rents/_form.html.erb:36:in `block (2 levels) in _app_views_rents__form_html_erb__1067874676536990990_70286007536580'
+  app/views/rents/_form.html.erb:36:in `block in _app_views_rents__form_html_erb__1067874676536990990_70286007536580'
+  app/views/rents/_form.html.erb:1:in `_app_views_rents__form_html_erb__1067874676536990990_70286007536580'
+  app/views/rents/new.html.erb:3:in `_app_views_rents_new_html_erb__3445079634669418609_70286001364260'
+
+
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.3ms)
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:37:14 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (30.7ms)
+  Rendered rents/new.html.erb within layouts/application (49.5ms)
+Completed 500 Internal Server Error in 104ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..2)):
+    33:   </div>
+    34:   <div class="field">
+    35:     <%= f.label :movies %><br>
+    36:     <%= f.select :movie_id, Movie.all.collect { |m| [t.id, t.title] }, {:multiple => true, :size => 5} %>
+    37:   </div>
+    38:   <div class="actions">
+    39:     <%= f.submit %>
+  app/views/rents/_form.html.erb:36:in `block (2 levels) in _app_views_rents__form_html_erb__1067874676536990990_70286004086860'
+  app/views/rents/_form.html.erb:36:in `block in _app_views_rents__form_html_erb__1067874676536990990_70286004086860'
+  app/views/rents/_form.html.erb:1:in `_app_views_rents__form_html_erb__1067874676536990990_70286004086860'
+  app/views/rents/new.html.erb:3:in `_app_views_rents_new_html_erb__3445079634669418609_70286001364260'
+
+
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.8ms)
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:37:23 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.8ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (27.3ms)
+  Rendered rents/new.html.erb within layouts/application (45.1ms)
+Completed 500 Internal Server Error in 99ms
+
+ActionView::Template::Error (undefined method `movie_id' for #<Rent:0x007fd978b7f7d8>):
+    33:   </div>
+    34:   <div class="field">
+    35:     <%= f.label :movies %><br>
+    36:     <%= f.select :movie_id, Movie.all.collect { |m| [m.id, m.title] }, {:multiple => true, :size => 5} %>
+    37:   </div>
+    38:   <div class="actions">
+    39:     <%= f.submit %>
+  app/views/rents/_form.html.erb:36:in `block in _app_views_rents__form_html_erb__1067874676536990990_70286004982120'
+  app/views/rents/_form.html.erb:1:in `_app_views_rents__form_html_erb__1067874676536990990_70286004982120'
+  app/views/rents/new.html.erb:3:in `_app_views_rents_new_html_erb__3445079634669418609_70286001364260'
+
+
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:40:10 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (87.4ms)
+  Rendered rents/new.html.erb within layouts/application (107.8ms)
+Completed 200 OK in 504ms (Views: 502.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:11 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:11 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:11 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:11 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:12 -0200
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:40:32 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (17.7ms)
+  Rendered rents/new.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 450ms (Views: 448.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:32 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:33 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:34 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:34 -0200
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:40:43 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (13.1ms)
+  Rendered rents/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 456ms (Views: 454.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:44 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:45 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:45 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:45 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:45 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:45 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:45 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:40:45 -0200
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:41:02 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.4ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (13.4ms)
+  Rendered rents/new.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 444ms (Views: 442.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:02 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:02 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:02 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:03 -0200
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:41:13 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (12.8ms)
+  Rendered rents/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 430ms (Views: 428.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:13 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:13 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:13 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:14 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:21 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:21 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:21 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:21 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:21 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:21 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:21 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:21 -0200
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:41:28 -0200
+Processing by RentsController#new as HTML
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  Rendered rents/_form.html.erb (14.3ms)
+  Rendered rents/new.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 433ms (Views: 431.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:28 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:28 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:28 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:28 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:28 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:29 -0200
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2014-10-29 00:41:41 -0200
+Processing by MoviesController#new as HTML
+  [1m[36mGender Load (0.3ms)[0m  [1mSELECT `genders`.* FROM `genders`[0m
+  [1m[35mShelf Load (0.4ms)[0m  SELECT `shelves`.* FROM `shelves`
+  Rendered movies/_form.html.erb (131.3ms)
+  Rendered movies/new.html.erb within layouts/application (159.9ms)
+Completed 200 OK in 596ms (Views: 590.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:42 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:42 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:42 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:42 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:42 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:42 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:43 -0200
+
+
+Started POST "/movies" for 10.0.2.2 at 2014-10-29 00:41:57 -0200
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KmM5DxO5+u8J1E3Lcf5XagAcO3khaXi0MqeElGfwLc=", "movie"=>{"title"=>"Movie 2", "review"=>"rev", "gender_id"=>"1", "shelf_id"=>"1"}, "commit"=>"Create Movie"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `movies` (`created_at`, `gender_id`, `review`, `shelf_id`, `title`, `updated_at`) VALUES ('2014-10-29 02:41:58', 1, 'rev', 1, 'Movie 2', '2014-10-29 02:41:58')
+  [1m[36m (30.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 39ms (ActiveRecord: 30.9ms)
+
+
+Started GET "/movies/2" for 10.0.2.2 at 2014-10-29 00:41:58 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  `movies`.* FROM `movies`  WHERE `movies`.`id` = 2 LIMIT 1
+  [1m[36mGender Load (0.3ms)[0m  [1mSELECT  `genders`.* FROM `genders`  WHERE `genders`.`id` = 1 LIMIT 1[0m
+  [1m[35mShelf Load (0.3ms)[0m  SELECT  `shelves`.* FROM `shelves`  WHERE `shelves`.`id` = 1 LIMIT 1
+  Rendered movies/show.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 437ms (Views: 433.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:58 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:58 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:58 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:58 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:58 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:41:59 -0200
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2014-10-29 00:42:03 -0200
+Processing by MoviesController#new as HTML
+  [1m[36mGender Load (0.3ms)[0m  [1mSELECT `genders`.* FROM `genders`[0m
+  [1m[35mShelf Load (0.3ms)[0m  SELECT `shelves`.* FROM `shelves`
+  Rendered movies/_form.html.erb (7.1ms)
+  Rendered movies/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 419ms (Views: 417.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:03 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:03 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:03 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:03 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:04 -0200
+
+
+Started POST "/movies" for 10.0.2.2 at 2014-10-29 00:42:17 -0200
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KmM5DxO5+u8J1E3Lcf5XagAcO3khaXi0MqeElGfwLc=", "movie"=>{"title"=>"Movie 3", "review"=>"evasd", "gender_id"=>"2", "shelf_id"=>"1"}, "commit"=>"Create Movie"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `movies` (`created_at`, `gender_id`, `review`, `shelf_id`, `title`, `updated_at`) VALUES ('2014-10-29 02:42:17', 2, 'evasd', 1, 'Movie 3', '2014-10-29 02:42:17')
+  [1m[36m (30.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/movies/3
+Completed 302 Found in 38ms (ActiveRecord: 31.4ms)
+
+
+Started GET "/movies/3" for 10.0.2.2 at 2014-10-29 00:42:17 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT  `movies`.* FROM `movies`  WHERE `movies`.`id` = 3 LIMIT 1
+  [1m[36mGender Load (0.4ms)[0m  [1mSELECT  `genders`.* FROM `genders`  WHERE `genders`.`id` = 2 LIMIT 1[0m
+  [1m[35mShelf Load (0.3ms)[0m  SELECT  `shelves`.* FROM `shelves`  WHERE `shelves`.`id` = 1 LIMIT 1
+  Rendered movies/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 428ms (Views: 423.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:17 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:18 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:19 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:19 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:19 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:19 -0200
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2014-10-29 00:42:20 -0200
+Processing by MoviesController#new as HTML
+  [1m[36mGender Load (0.3ms)[0m  [1mSELECT `genders`.* FROM `genders`[0m
+  [1m[35mShelf Load (0.2ms)[0m  SELECT `shelves`.* FROM `shelves`
+  Rendered movies/_form.html.erb (6.5ms)
+  Rendered movies/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 434ms (Views: 431.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:21 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:21 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:21 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:21 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:21 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:21 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:21 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:22 -0200
+
+
+Started POST "/movies" for 10.0.2.2 at 2014-10-29 00:42:31 -0200
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KmM5DxO5+u8J1E3Lcf5XagAcO3khaXi0MqeElGfwLc=", "movie"=>{"title"=>"Movie 4", "review"=>"asd", "gender_id"=>"1", "shelf_id"=>"1"}, "commit"=>"Create Movie"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `movies` (`created_at`, `gender_id`, `review`, `shelf_id`, `title`, `updated_at`) VALUES ('2014-10-29 02:42:32', 1, 'asd', 1, 'Movie 4', '2014-10-29 02:42:32')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/movies/4
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/movies/4" for 10.0.2.2 at 2014-10-29 00:42:32 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  `movies`.* FROM `movies`  WHERE `movies`.`id` = 4 LIMIT 1
+  [1m[36mGender Load (0.4ms)[0m  [1mSELECT  `genders`.* FROM `genders`  WHERE `genders`.`id` = 1 LIMIT 1[0m
+  [1m[35mShelf Load (0.3ms)[0m  SELECT  `shelves`.* FROM `shelves`  WHERE `shelves`.`id` = 1 LIMIT 1
+  Rendered movies/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 420ms (Views: 416.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:32 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:32 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:32 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:32 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:32 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:32 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:33 -0200
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2014-10-29 00:42:35 -0200
+Processing by MoviesController#new as HTML
+  [1m[36mGender Load (0.3ms)[0m  [1mSELECT `genders`.* FROM `genders`[0m
+  [1m[35mShelf Load (0.3ms)[0m  SELECT `shelves`.* FROM `shelves`
+  Rendered movies/_form.html.erb (6.6ms)
+  Rendered movies/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 441ms (Views: 439.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:36 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:36 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:36 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:36 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:36 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:36 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:36 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:36 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:37 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:37 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:37 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:37 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:37 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:37 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:37 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:37 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:37 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:37 -0200
+
+
+Started POST "/movies" for 10.0.2.2 at 2014-10-29 00:42:46 -0200
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KmM5DxO5+u8J1E3Lcf5XagAcO3khaXi0MqeElGfwLc=", "movie"=>{"title"=>"Movie 5", "review"=>"asd", "gender_id"=>"2", "shelf_id"=>"1"}, "commit"=>"Create Movie"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `movies` (`created_at`, `gender_id`, `review`, `shelf_id`, `title`, `updated_at`) VALUES ('2014-10-29 02:42:46', 2, 'asd', 1, 'Movie 5', '2014-10-29 02:42:46')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/movies/5
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/5" for 10.0.2.2 at 2014-10-29 00:42:46 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  `movies`.* FROM `movies`  WHERE `movies`.`id` = 5 LIMIT 1
+  [1m[36mGender Load (0.4ms)[0m  [1mSELECT  `genders`.* FROM `genders`  WHERE `genders`.`id` = 2 LIMIT 1[0m
+  [1m[35mShelf Load (0.3ms)[0m  SELECT  `shelves`.* FROM `shelves`  WHERE `shelves`.`id` = 1 LIMIT 1
+  Rendered movies/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 431ms (Views: 428.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:46 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:46 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:47 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:48 -0200
+
+
+Started GET "/rents" for 10.0.2.2 at 2014-10-29 00:42:51 -0200
+Processing by RentsController#index as HTML
+  [1m[36mRent Load (0.3ms)[0m  [1mSELECT `rents`.* FROM `rents`[0m
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 1 LIMIT 1
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 3 LIMIT 1[0m
+  Rendered rents/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 453ms (Views: 451.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:51 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:51 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:51 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:51 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:51 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:42:52 -0200
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:42:54 -0200
+Processing by RentsController#new as HTML
+  [1m[35mTenant Load (0.3ms)[0m  SELECT `tenants`.* FROM `tenants`
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT `movies`.* FROM `movies`[0m
+  Rendered rents/_form.html.erb (20.4ms)
+  Rendered rents/new.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 444ms (Views: 442.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/rents" for 10.0.2.2 at 2014-10-29 00:43:07 -0200
+Processing by RentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KmM5DxO5+u8J1E3Lcf5XagAcO3khaXi0MqeElGfwLc=", "rent"=>{"price"=>"Rent", "date(1i)"=>"2014", "date(2i)"=>"10", "date(3i)"=>"29", "preview_date(1i)"=>"2014", "preview_date(2i)"=>"10", "preview_date(3i)"=>"29", "end_date(1i)"=>"2014", "end_date(2i)"=>"10", "end_date(3i)"=>"29", "tenant_id"=>"2", "movies"=>["", "1", "2", "3"]}, "commit"=>"Create Rent"}
+Unpermitted parameters: movies
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `rents` (`created_at`, `date`, `end_date`, `preview_date`, `price`, `tenant_id`, `updated_at`) VALUES ('2014-10-29 02:43:07', '2014-10-29 00:00:00', '2014-10-29 00:00:00', '2014-10-29 00:00:00', 0.0, 2, '2014-10-29 02:43:07')[0m
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/rents/3
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/rents/3" for 10.0.2.2 at 2014-10-29 00:43:07 -0200
+Processing by RentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRent Load (0.3ms)[0m  [1mSELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1[0m
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 2 LIMIT 1
+  Rendered rents/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 431ms (Views: 428.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:08 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:08 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:08 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:08 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:08 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:08 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:08 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:08 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:08 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:09 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:09 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:09 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:09 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:09 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:09 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:09 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:09 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:09 -0200
+
+
+Started GET "/rents/3/edit" for 10.0.2.2 at 2014-10-29 00:43:50 -0200
+Processing by RentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRent Load (0.3ms)[0m  [1mSELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1[0m
+  [1m[35mTenant Load (0.3ms)[0m  SELECT `tenants`.* FROM `tenants`
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT `movies`.* FROM `movies`[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT `movies`.* FROM `movies` INNER JOIN `movies_rents` ON `movies`.`id` = `movies_rents`.`movie_id` WHERE `movies_rents`.`rent_id` = 3
+  Rendered rents/_form.html.erb (178.9ms)
+  Rendered rents/edit.html.erb within layouts/application (206.8ms)
+Completed 200 OK in 677ms (Views: 637.0ms | ActiveRecord: 5.1ms)
+
+
+Started PATCH "/rents/3" for 10.0.2.2 at 2014-10-29 00:43:54 -0200
+Processing by RentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KmM5DxO5+u8J1E3Lcf5XagAcO3khaXi0MqeElGfwLc=", "rent"=>{"price"=>"0.0", "date(1i)"=>"2014", "date(2i)"=>"10", "date(3i)"=>"29", "preview_date(1i)"=>"2014", "preview_date(2i)"=>"10", "preview_date(3i)"=>"29", "end_date(1i)"=>"2014", "end_date(2i)"=>"10", "end_date(3i)"=>"29", "tenant_id"=>"2", "movies"=>["", "1", "2"]}, "commit"=>"Update Rent", "id"=>"3"}
+  [1m[36mRent Load (0.5ms)[0m  [1mSELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1[0m
+Unpermitted parameters: movies
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/rents/3
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/rents/3" for 10.0.2.2 at 2014-10-29 00:43:54 -0200
+Processing by RentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRent Load (0.3ms)[0m  SELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 2 LIMIT 1[0m
+  Rendered rents/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 459ms (Views: 455.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:55 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:55 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:55 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:55 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:55 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:55 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:55 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:43:55 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:56 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:56 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:56 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:56 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:56 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:56 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:56 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:56 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:56 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:43:56 -0200
+
+
+Started GET "/rents/3/edit" for 10.0.2.2 at 2014-10-29 00:44:59 -0200
+Processing by RentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRent Load (0.3ms)[0m  SELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1
+  [1m[36mTenant Load (0.2ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT `movies`.* FROM `movies` INNER JOIN `movies_rents` ON `movies`.`id` = `movies_rents`.`movie_id` WHERE `movies_rents`.`rent_id` = 3[0m
+  Rendered rents/_form.html.erb (32.2ms)
+  Rendered rents/edit.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 523ms (Views: 518.9ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/rents/3" for 10.0.2.2 at 2014-10-29 00:45:04 -0200
+Processing by RentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KmM5DxO5+u8J1E3Lcf5XagAcO3khaXi0MqeElGfwLc=", "rent"=>{"price"=>"0.0", "date(1i)"=>"2014", "date(2i)"=>"10", "date(3i)"=>"29", "preview_date(1i)"=>"2014", "preview_date(2i)"=>"10", "preview_date(3i)"=>"29", "end_date(1i)"=>"2014", "end_date(2i)"=>"10", "end_date(3i)"=>"29", "tenant_id"=>"2", "movies"=>["", "2", "3", "4"]}, "commit"=>"Update Rent", "id"=>"3"}
+  [1m[35mRent Load (0.3ms)[0m  SELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1
+Unpermitted parameters: movies
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/rents/3
+Completed 302 Found in 32ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rents/3" for 10.0.2.2 at 2014-10-29 00:45:04 -0200
+Processing by RentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRent Load (0.3ms)[0m  [1mSELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1[0m
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 2 LIMIT 1
+  Rendered rents/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 469ms (Views: 466.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:45:05 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:45:05 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:45:05 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:45:05 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:45:05 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:45:05 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:45:05 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:45:05 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:45:05 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:45:05 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:45:06 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:45:06 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:45:06 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:45:06 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:45:06 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:45:06 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:45:06 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:45:06 -0200
+
+
+Started GET "/rents" for 10.0.2.2 at 2014-10-29 00:46:20 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by RentsController#index as HTML
+  [1m[35mRent Load (0.3ms)[0m  SELECT `rents`.* FROM `rents`
+  [1m[36mTenant Load (0.5ms)[0m  [1mSELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 1 LIMIT 1[0m
+  [1m[35mTenant Load (0.3ms)[0m  SELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 3 LIMIT 1
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 2 LIMIT 1[0m
+  Rendered rents/index.html.erb within layouts/application (88.6ms)
+Completed 200 OK in 1143ms (Views: 1064.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:46:22 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:46:22 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:46:22 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:46:22 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:46:22 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:46:22 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:46:23 -0200
+
+
+Started GET "/rents/new" for 10.0.2.2 at 2014-10-29 00:46:25 -0200
+Processing by RentsController#new as HTML
+  [1m[35mTenant Load (0.4ms)[0m  SELECT `tenants`.* FROM `tenants`
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT `movies`.* FROM `movies`[0m
+  Rendered rents/_form.html.erb (192.8ms)
+  Rendered rents/new.html.erb within layouts/application (247.1ms)
+Completed 200 OK in 672ms (Views: 668.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/rents" for 10.0.2.2 at 2014-10-29 00:46:28 -0200
+Processing by RentsController#index as HTML
+  [1m[35mRent Load (0.3ms)[0m  SELECT `rents`.* FROM `rents`
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 1 LIMIT 1[0m
+  [1m[35mTenant Load (0.4ms)[0m  SELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 3 LIMIT 1
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT  `tenants`.* FROM `tenants`  WHERE `tenants`.`id` = 2 LIMIT 1[0m
+  Rendered rents/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 414ms (Views: 411.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rents/3/edit" for 10.0.2.2 at 2014-10-29 00:46:33 -0200
+Processing by RentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRent Load (0.4ms)[0m  SELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT `movies`.* FROM `movies` INNER JOIN `movies_rents` ON `movies`.`id` = `movies_rents`.`movie_id` WHERE `movies_rents`.`rent_id` = 3[0m
+  Rendered rents/_form.html.erb (34.3ms)
+  Rendered rents/edit.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 469ms (Views: 464.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rents/3/edit" for 10.0.2.2 at 2014-10-29 00:47:44 -0200
+Processing by RentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRent Load (0.3ms)[0m  SELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1
+  [1m[36mTenant Load (0.2ms)[0m  [1mSELECT `tenants`.* FROM `tenants`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies`
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT `movies`.* FROM `movies` INNER JOIN `movies_rents` ON `movies`.`id` = `movies_rents`.`movie_id` WHERE `movies_rents`.`rent_id` = 3[0m
+  Rendered rents/_form.html.erb (123.8ms)
+  Rendered rents/edit.html.erb within layouts/application (157.7ms)
+Completed 200 OK in 667ms (Views: 626.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:47:45 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:47:45 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:47:45 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:47:46 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:47:47 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:47:47 -0200
+
+
+Started GET "/rents" for 10.0.2.2 at 2014-10-29 00:47:55 -0200
+Processing by RentsController#index as HTML
+  [1m[35mRent Load (0.3ms)[0m  SELECT `rents`.* FROM `rents`
+  [1m[36mTenant Load (0.3ms)[0m  [1mSELECT `tenants`.* FROM `tenants`  WHERE `tenants`.`id` IN (1, 3, 2)[0m
+  [1m[35mHABTM_Movies Load (0.2ms)[0m  SELECT `movies_rents`.* FROM `movies_rents`  WHERE `movies_rents`.`rent_id` IN (1, 2, 3)
+  Rendered rents/index.html.erb within layouts/application (83.2ms)
+Completed 200 OK in 492ms (Views: 489.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rents/3/edit" for 10.0.2.2 at 2014-10-29 00:48:04 -0200
+Processing by RentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRent Load (0.3ms)[0m  [1mSELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1[0m
+  [1m[35mTenant Load (0.3ms)[0m  SELECT `tenants`.* FROM `tenants`
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT `movies`.* FROM `movies`[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT `movies`.* FROM `movies` INNER JOIN `movies_rents` ON `movies`.`id` = `movies_rents`.`movie_id` WHERE `movies_rents`.`rent_id` = 3
+  Rendered rents/_form.html.erb (16.0ms)
+  Rendered rents/edit.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 482ms (Views: 478.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rents/3/edit" for 10.0.2.2 at 2014-10-29 00:48:57 -0200
+Processing by RentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRent Load (0.3ms)[0m  [1mSELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1[0m
+  [1m[35mTenant Load (0.5ms)[0m  SELECT `tenants`.* FROM `tenants`
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT `movies`.* FROM `movies`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies` INNER JOIN `movies_rents` ON `movies`.`id` = `movies_rents`.`movie_id` WHERE `movies_rents`.`rent_id` = 3
+  Rendered rents/_form.html.erb (16.1ms)
+  Rendered rents/edit.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 450ms (Views: 446.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:48:57 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:48:58 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:48:59 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:48:59 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:48:59 -0200
+
+
+Started GET "/rents/3/edit" for 10.0.2.2 at 2014-10-29 00:49:08 -0200
+Processing by RentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRent Load (0.3ms)[0m  [1mSELECT  `rents`.* FROM `rents`  WHERE `rents`.`id` = 3 LIMIT 1[0m
+  [1m[35mTenant Load (0.9ms)[0m  SELECT `tenants`.* FROM `tenants`
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT `movies`.* FROM `movies`[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT `movies`.* FROM `movies` INNER JOIN `movies_rents` ON `movies`.`id` = `movies_rents`.`movie_id` WHERE `movies_rents`.`rent_id` = 3
+  Rendered rents/_form.html.erb (15.0ms)
+  Rendered rents/edit.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 486ms (Views: 481.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-10-29 00:49:09 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-10-29 00:49:09 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-10-29 00:49:09 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-10-29 00:49:09 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-10-29 00:49:09 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-10-29 00:49:09 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-10-29 00:49:10 -0200
