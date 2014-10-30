@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @movie.title %>
@@ -11,13 +9,23 @@
 </p>
 
 <p>
+  <strong>Price:</strong>
+  <%= @movie.price %>
+</p>
+
+<p>
   <strong>Gender:</strong>
-  <%= @movie.gender.name unless @movie.gender.nil? %>
+  <%= @movie.gender.try(:name) %>
 </p>
 
 <p>
   <strong>Shelf:</strong>
-  <%= @movie.shelf.name unless @movie.shelf.nil? %>
+  <%= @movie.shelf.try(:name) %>
+</p>
+
+<p>
+  <strong>Rented:</strong>
+  <%= @movie.rented? ? 'Yes' : 'No' %>
 </p>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |

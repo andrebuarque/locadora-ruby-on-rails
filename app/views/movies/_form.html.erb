@@ -21,11 +21,15 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.select :gender_id, Gender.all.collect { |gender| [gender.name, gender.id] }, include_blank: true %>
+    <%= f.select :gender_id, @genders.collect { |gender| [gender.name, gender.id] }, include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :shelf %><br>
-    <%= f.select :shelf_id, Shelf.all.collect { |shelf| [shelf.name, shelf.id] }, include_blank: true %>
+    <%= f.select :shelf_id, @shelves.collect { |shelf| [shelf.name, shelf.id] }, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
   </div>
   <div class="actions">
     <%= f.submit %>

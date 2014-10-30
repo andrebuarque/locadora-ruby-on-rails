@@ -12,28 +12,30 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :movies %><br>
+    <!-- f.select :movie_ids, Movie.all.collect { |m| [m.title, m.id] }, {}, :multiple => true, :size => 5 -->
+    <%= f.collection_check_boxes(:movie_ids, @movies, :id, :title, {}, {:class => 'checkbox_movies'}) { |m| m.check_box + m.label + tag("br") }
+    %>
+  </div>
+  <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.date_field :date %>
   </div>
   <div class="field">
     <%= f.label :preview_date %><br>
-    <%= f.date_select :preview_date %>
+    <%= f.date_field :preview_date %>
   </div>
   <div class="field">
     <%= f.label :end_date %><br>
-    <%= f.date_select :end_date %>
+    <%= f.date_field :end_date %>
   </div>
   <div class="field">
     <%= f.label :tenant %><br>
     <%= f.select :tenant_id, Tenant.all.collect { |t| [t.name, t.id] }, include_blank: true %>
-  </div>
-  <div class="field">
-    <%= f.label :movies %><br>
-    <%= f.select :movies, Movie.all.collect { |m| [m.title, m.id] }, {}, :multiple => true, :size => 5 %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_action :prepare_form, only: [:new, :edit]
 
   # GET /movies
   # GET /movies.json
@@ -67,8 +68,13 @@ class MoviesController < ApplicationController
       @movie = Movie.find(params[:id])
     end
 
+    def prepare_form
+      @genders = Gender.order :name
+      @shelves = Shelf.order :name
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:title, :review, :gender_id, :shelf_id)
+      params.require(:movie).permit(:title, :review, :gender_id, :shelf_id, :price)
     end
 end

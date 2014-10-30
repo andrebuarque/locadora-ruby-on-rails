@@ -1,12 +1,14 @@
 <h1>Listing movies</h1>
 
-<table>
+<table cellspacing="0" border="1">
   <thead>
     <tr>
       <th>Title</th>
       <th>Review</th>
+      <th>Price</th>
       <th>Gender</th>
       <th>Shelf</th>
+      <th>Rented</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,8 +18,10 @@
       <tr>
         <td><%= movie.title %></td>
         <td><%= movie.review %></td>
-        <td><%= movie.gender.name unless movie.gender.nil? %></td>
-        <td><%= movie.shelf.name unless movie.shelf.nil? %></td>
+        <td><%= movie.price %></td>
+        <td><%= movie.gender.try(:name) %></td>
+        <td><%= movie.shelf.try(:name) %></td>
+        <td align="center"><%= movie.rented? ? 'Yes' : 'No' %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>

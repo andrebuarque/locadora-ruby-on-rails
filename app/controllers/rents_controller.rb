@@ -1,5 +1,6 @@
 class RentsController < ApplicationController
   before_action :set_rent, only: [:show, :edit, :update, :destroy]
+  before_action :set_movies, only: [:new, :edit]
 
   # GET /rents
   # GET /rents.json
@@ -67,8 +68,17 @@ class RentsController < ApplicationController
       @rent = Rent.find(params[:id])
     end
 
+    def set_movies
+      @movies = Movie.where(rented: false)
+      if not @rent.try(:movies).nil?
+        @rent.try(:movies).each do |movie|
+          @movies << movie if not @movies.include? movie
+        end
+      end
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def rent_params
-      params.require(:rent).permit(:price, :date, :preview_date, :end_date, :tenant_id, :movies)
+      params.require(:rent).permit(:price, :date, :preview_date, :end_date, :tenant_id, :movie_ids => [])
     end
 end
