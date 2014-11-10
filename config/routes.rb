@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :testes
+
   devise_for :users
   
   resources :tenants
@@ -12,6 +14,8 @@ Rails.application.routes.draw do
   resources :movies
 
   root 'movies#index'
+
+  put 'rents/deliver/:id' => 'rents#deliver', as: :deliver
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

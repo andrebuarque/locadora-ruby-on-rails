@@ -1,5 +1,5 @@
 class RentsController < ApplicationController
-  before_action :set_rent, only: [:show, :edit, :update, :destroy]
+  before_action :set_rent, only: [:show, :edit, :update, :destroy, :deliver]
   before_action :set_movies, only: [:new, :edit]
 
   # GET /rents
@@ -26,6 +26,7 @@ class RentsController < ApplicationController
   # POST /rents.json
   def create
     @rent = Rent.new(rent_params)
+    @rent.date = DateTime.now
 
     respond_to do |format|
       if @rent.save
@@ -62,6 +63,14 @@ class RentsController < ApplicationController
     end
   end
 
+  # PUT /rents/1
+  # PUT /rents/1.json
+  def deliver
+    @rent.end_date = DateTime.now
+    @rent.save
+    redirect_to rents_url, notice: 'Rent was successfully delivered.'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_rent
@@ -71,14 +80,12 @@ class RentsController < ApplicationController
     def set_movies
       @movies = Movie.where(rented: false)
       if not @rent.try(:movies).nil?
-        @rent.try(:movies).each do |movie|
-          @movies << movie if not @movies.include? movie
-        end
+        @rent.try(:movies).each { |movie| @movies << movie if not @movies.include? movie }
       end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rent_params
-      params.require(:rent).permit(:price, :date, :preview_date, :end_date, :tenant_id, :movie_ids => [])
+      params.require(:rent).permit(:price, :preview_date, :tenant_id, :movie_ids => [])
     end
 end

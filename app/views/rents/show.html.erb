@@ -5,17 +5,17 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @rent.date.strftime('%d/%m/%Y') %>
+  <%= @rent.date.strftime('%d/%m/%Y') unless @rent.date.nil? %>
 </p>
 
 <p>
   <strong>Preview date:</strong>
-  <%= @rent.preview_date.strftime('%d/%m/%Y') %>
+  <%= @rent.preview_date.strftime('%d/%m/%Y') unless @rent.preview_date.nil? %>
 </p>
 
 <p>
   <strong>End date:</strong>
-  <%= @rent.end_date.strftime('%d/%m/%Y') %>
+  <%= @rent.end_date.strftime('%d/%m/%Y') unless @rent.end_date.nil? %>
 </p>
 
 <p>

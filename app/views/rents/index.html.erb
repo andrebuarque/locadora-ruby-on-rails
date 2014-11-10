@@ -9,7 +9,7 @@
       <th>Date</th>
       <th>Preview date</th>
       <th>End date</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -19,12 +19,13 @@
         <td><%= rent.tenant.name if not rent.tenant.nil? %></td>
         <td><%= rent.movies.map { |m| m.title }.join(', ') if not rent.movies.nil? %></td>
         <td><%= rent.price %></td>
-        <td><%= rent.date.strftime('%d/%m/%Y') %></td>
-        <td><%= rent.preview_date.strftime('%d/%m/%Y') %></td>
-        <td><%= rent.end_date.strftime('%d/%m/%Y') %></td>
+        <td><%= rent.date.strftime('%d/%m/%Y') unless rent.date.nil? %></td>
+        <td><%= rent.preview_date.strftime('%d/%m/%Y') unless rent.preview_date.nil? %></td>
+        <td><%= rent.end_date.strftime('%d/%m/%Y') unless rent.end_date.nil? %></td>
         <td><%= link_to 'Show', rent %></td>
         <td><%= link_to 'Edit', edit_rent_path(rent) %></td>
         <td><%= link_to 'Destroy', rent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Deliver', deliver_path(rent), method: :put %></td>
       </tr>
     <% end %>
   </tbody>
