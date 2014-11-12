@@ -36987,3 +36987,240 @@ Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-11-02 23:10:43 -0200
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-11-02 23:10:43 -0200
+
+
+Started GET "/" for 10.0.2.2 at 2014-11-12 00:10:52 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MoviesController#index as HTML
+Completed 401 Unauthorized in 74ms
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2014-11-12 00:10:53 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/vagrant/local/ruby/gems/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (149.6ms)
+Completed 200 OK in 1575ms (Views: 1536.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-11-12 00:10:55 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-11-12 00:10:55 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-11-12 00:10:55 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-11-12 00:10:55 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-11-12 00:10:55 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-11-12 00:10:55 -0200
+
+
+Started GET "/assets/testes.css?body=1" for 10.0.2.2 at 2014-11-12 00:10:55 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-11-12 00:10:55 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-11-12 00:10:55 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:56 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:56 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:56 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:56 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:56 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:56 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:56 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:56 -0200
+
+
+Started GET "/assets/testes.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:56 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:56 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-11-12 00:10:57 -0200
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2014-11-12 00:11:05 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y1H+l/d261782gKaR52pK8aEYfjaQjJnO9gzZap1+V0=", "user"=>{"email"=>"andre.buarque90@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'andre.buarque90@gmail.com'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (24.3ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2014-11-12 02:11:05', `last_sign_in_at` = '2014-11-03 00:13:54', `sign_in_count` = 6, `updated_at` = '2014-11-12 02:11:05' WHERE `users`.`id` = 2
+  [1m[36m (28.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 319ms (ActiveRecord: 53.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-11-12 00:11:05 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT `movies`.* FROM `movies`[0m
+  [1m[35mGender Load (0.5ms)[0m  SELECT `genders`.* FROM `genders`  WHERE `genders`.`id` IN (1, 2)
+  [1m[36mShelf Load (0.3ms)[0m  [1mSELECT `shelves`.* FROM `shelves`  WHERE `shelves`.`id` IN (1)[0m
+  Rendered movies/index.html.erb within layouts/application (136.0ms)
+Completed 200 OK in 690ms (Views: 621.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:06 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:06 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:06 -0200
+
+
+Started GET "/assets/testes.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/testes.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:07 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:08 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:08 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:08 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:08 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:08 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:08 -0200
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2014-11-12 00:11:17 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Dbb1/P4ewxqQ1NFzQpuYR5rEcXNelwENb5imYgNroiU="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `remember_created_at` = NULL, `updated_at` = '2014-11-12 02:11:17' WHERE `users`.`id` = 2
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-11-12 00:11:17 -0200
+Processing by MoviesController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2014-11-12 00:11:17 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/vagrant/local/ruby/gems/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (0.4ms)
+  Rendered /home/vagrant/local/ruby/gems/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 500ms (Views: 497.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:17 -0200
+
+
+Started GET "/assets/rents.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:17 -0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/shelves.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/genders.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/tenants.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/testes.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/genders.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:18 -0200
+
+
+Started GET "/assets/shelves.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:19 -0200
+
+
+Started GET "/assets/tenants.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:19 -0200
+
+
+Started GET "/assets/testes.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:19 -0200
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:19 -0200
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:19 -0200
+
+
+Started GET "/assets/rents.js?body=1" for 10.0.2.2 at 2014-11-12 00:11:19 -0200

@@ -27,6 +27,7 @@
 	</p>
 
 	<!-- MENU -->
+	<% if user_signed_in? %>
 	<ul style="float: left; margin-right: 40px; border: 1px solid gray; padding: 7px; list-style-type: none;">
 		<li><%= link_to 'Movies', movies_path %></li>
 		<li><%= link_to 'Genders', genders_path %></li>
@@ -34,6 +35,7 @@
 		<li><%= link_to 'Shelves', shelves_path %></li>
 		<li><%= link_to 'Tenants', tenants_path %></li>
 	</ul>
+	<% end %>
 
 	<div style="float: left">
 		<%= yield %>
